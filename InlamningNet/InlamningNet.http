@@ -1,0 +1,6 @@
+@InlamningNet_HostAddress = http://localhost:5197
+
+GET {{InlamningNet_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

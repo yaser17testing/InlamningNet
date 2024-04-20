@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Net.UI.Models.ViewModels.OrderViewModel>
+@{
+}
+
+
+
+<h1 class="mt-3">Saved Course</h1>
+
+
+
+
+
+
+<div class="container">
+    <div class="row justify-content-center">
+
+
+
+        @if (Model != null && Model.Any())
+        {
+
+            foreach (var order in Model)
+            {
+                <div class="col-md-4">
+                    <div class="mb-5 bg-light box-shadow p-5">
+
+
+                        <h2 class="mb-4">@order.CourseId </h2>
+                        <p class="mb-4">
+
+
+
+                        </p>
+
+
+
+                        <p class="mb-4">@order.PurchaseDate</p>
+
+
+                        <a asp-controller="Course" asp-action="GetCourse" asp-route-id="@order.CourseId" class="btn btn-dark">Read More</a>
+
+
+                    </div>
+                </div>
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+</div>
+
+
+<div>
+
+    TEsting saved course
+
+</div>
