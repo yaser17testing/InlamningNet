@@ -1,11 +1,15 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using Net.UI.Data;
+using Net.UI.Models;
 using Net.UI.Models.DTO;
 using Net.UI.Models.Entity;
 using Net.UI.Repository;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 using System.Security.Claims;
 
 namespace Net.UI.Controllers
@@ -20,11 +24,15 @@ namespace Net.UI.Controllers
 	{
 		private readonly NetDbContext netDbContext;
 		private readonly IAdressRepository adressRepository;
+        private readonly IConfiguration configuration;
+		private readonly ImageRepository imageRepository;
 
-		public AppUserController(NetDbContext netDbContext, IAdressRepository adressRepository)
+		public AppUserController(NetDbContext netDbContext, IAdressRepository adressRepository,IConfiguration configuration,ImageRepository imageRepository)
 		{
 			this.netDbContext = netDbContext;
 			this.adressRepository = adressRepository;
+            this.configuration = configuration;
+			this.imageRepository = imageRepository;
 		}
 
 
@@ -70,11 +78,11 @@ namespace Net.UI.Controllers
 
 
 
-		
+
 
 			var appUser = await netDbContext.AppUsers.FirstOrDefaultAsync(u => u.IdentityUserId == userId);
 
-			
+
 			if (appUser == null)
 			{
 				return NotFound("User not found.");
@@ -108,10 +116,10 @@ namespace Net.UI.Controllers
 
 
 				adress.AdressOne = editDto.AdressOne;
-					adress.AdressTwo = editDto.AdressTwo;
+				adress.AdressTwo = editDto.AdressTwo;
 				adress.City = editDto.City;
 				adress.PostalCode = editDto.PostalCode;
-				
+
 
 
 				//var result = await adressRepository.UpdateAsync(appUserId);
@@ -123,7 +131,7 @@ namespace Net.UI.Controllers
 			await netDbContext.SaveChangesAsync();
 
 
-			return RedirectToAction("Index", "Home");
+			return RedirectToAction("EditUser");
 
 		}
 
@@ -150,7 +158,7 @@ namespace Net.UI.Controllers
 			var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Hämtar användar-ID 
 
 
-			
+
 
 
 			var appUser = await netDbContext.AppUsers.FirstOrDefaultAsync(u => u.IdentityUserId == userId); // App user Id i string.
@@ -176,6 +184,7 @@ namespace Net.UI.Controllers
 				Email = userEmail,
 				Name = appUser.Name,
 				LastName = appUser.LastName,
+				ProfilImage = appUser.ProfilImage,
 				Bio = appUser.Bio,
 
 
@@ -221,7 +230,7 @@ namespace Net.UI.Controllers
 
 
 
-			
+
 
 
 			if (appUser == null)
@@ -234,7 +243,7 @@ namespace Net.UI.Controllers
 
 
 			//Test härifrån
-			
+
 
 
 
@@ -242,9 +251,9 @@ namespace Net.UI.Controllers
 			appUser.Name = editDto.Name;
 			appUser.LastName = editDto.LastName;
 			appUser.Bio = editDto.Bio;
+			
 
 
-		
 
 
 			//Test 
@@ -253,11 +262,72 @@ namespace Net.UI.Controllers
 			await netDbContext.SaveChangesAsync();
 
 
-            return RedirectToAction("Index", "Home");
+			return RedirectToAction("EditUser");
+		}
+
+
+
+
+
+
+		
+
+
+
+
+
+		[HttpPost]
+		public async Task<IActionResult> UploadImage(IFormFile file)
+		{
+
+
+
+
+			var result = await imageRepository.UploadUserProfilImageAsync(User, file);
+
+
+
+
+
+
+			/*
+				var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+
+			
+				var appUser = await netDbContext.AppUsers.FirstOrDefaultAsync(u => u.IdentityUserId == userId);
+
+			if (appUser != null)
+			{
+
+
+			var model = new EditDto { ProfilImage = appUser?.ProfilImage };
+
+				return View("EditUser", model);  // Se till att "EditUser" är namnet på din vy
+
+
+			}
+			*/
+
+			return RedirectToAction("EditUser");
+
+
+
+			
+
+
+			
+
+
+		}
+
+
+
+
+
+
+
+
+
 	}
-
-
-
-
-    }
 }

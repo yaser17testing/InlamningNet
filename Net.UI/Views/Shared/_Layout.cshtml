@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Net.UI.styles.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/4116aba114.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -46,7 +47,7 @@
                         @if (signInManager.IsSignedIn(User))
                         {
 
-                            <div class="me-3 text-light">
+                            <div class="me-3 text-black">
                                 @User?.Identity?.Name
                             </div>
 
@@ -72,7 +73,6 @@
         </nav>
     </header>
 
-   
 
 
 
@@ -82,6 +82,7 @@
             @RenderBody()
         </main>
     </div>
+
     
 
     <footer class="border-top footer text-muted">

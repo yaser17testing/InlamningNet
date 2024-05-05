@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using Net.UI.Data;
 using Net.UI.Repository;
 
@@ -22,9 +23,19 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
 
 
 
+builder.Services.Configure<IdentityOptions>(options =>
+{
+	//options.Password.RequiredLength = 6;
+	
+});
+
+
 
 builder.Services.AddScoped<IOrderRepository, SQLOrderRepository>();
 builder.Services.AddScoped<IAdressRepository, SQLAdressRepository>();
+builder.Services.AddScoped<ImageRepository>();
+
+
 
 var app = builder.Build();
 
@@ -37,7 +48,12 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+
+
 app.UseStaticFiles();
+
+
 
 app.UseRouting();
 

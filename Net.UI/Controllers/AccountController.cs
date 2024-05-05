@@ -44,44 +44,41 @@ namespace Net.UI.Controllers
 
 		public async Task<IActionResult> Register(RegisterViewModel registerViewModel)
 		{
-
-			var identityUser = new IdentityUser
+			if (ModelState.IsValid)
 			{
-				UserName = registerViewModel.Username,
-				Email = registerViewModel.Email
-			};
-			var identityResult = await userManager.CreateAsync(identityUser, registerViewModel.Password);
-			if (identityResult.Succeeded)
-			{
-				var appUser = new AppUser { IdentityUserId = identityUser.Id, Name = registerViewModel.Name, LastName = registerViewModel.LastName };
-
-
-
-				netDbContext.AppUsers.Add(appUser);
-				await netDbContext.SaveChangesAsync();
-
-
-				
-			
-
-				//assign this user the "User" role
-				var roleIdentityResult = await userManager.AddToRoleAsync(identityUser, "User");
-
-				if (roleIdentityResult.Succeeded)
+				var identityUser = new IdentityUser
 				{
-					//Show sucess notification
+					UserName = registerViewModel.Username,
+					Email = registerViewModel.Email
+				};
+				var identityResult = await userManager.CreateAsync(identityUser, registerViewModel.Password);
 
-					return RedirectToAction("Register");
+				if (identityResult.Succeeded)
+				{
+					var appUser = new AppUser { IdentityUserId = identityUser.Id, Name = registerViewModel.Name, LastName = registerViewModel.LastName };
 
+					netDbContext.AppUsers.Add(appUser);
+					await netDbContext.SaveChangesAsync();
+
+					//assign this user the "User" role
+					var roleIdentityResult = await userManager.AddToRoleAsync(identityUser, "User");
+
+					if (roleIdentityResult.Succeeded)
+					{
+						//Show success notification
+						return RedirectToAction("Register");
+					}
+				}
+
+				// If not succeeded, add errors to ModelState
+				foreach (var error in identityResult.Errors)
+				{
+					ModelState.AddModelError("", error.Description);
 				}
 			}
+
 			//Show error notification
-
-			return View();
-
-
-
-
+			return View(registerViewModel);
 		}
 
 
@@ -104,7 +101,14 @@ namespace Net.UI.Controllers
 		[HttpPost]
 		public async Task<IActionResult> Login(LoginViewModel loginViewModel)
 		{
+			if (!ModelState.IsValid)
+			{
 
+
+
+				return View();
+
+			}
 
 			var signInResult = await signInManager.PasswordSignInAsync(loginViewModel.Username, loginViewModel.Password, false, false);
 

@@ -1,0 +1,129 @@
+﻿html, body {
+    background-color: #F3F6FF;
+}
+
+.undermenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+
+
+    .navTwo {
+
+
+
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 0px;
+        }
+    }
+
+
+    nav {
+
+        a {
+            color: #191919;
+            text-decoration: none;
+            margin-right: 35px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.button {
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: gray;
+}
+
+
+
+
+
+
+
+
+.Sign {
+    display: flex;
+    justify-content: center; // Centrerar innehållet horisontellt
+    align-items: center; // Centrerar innehållet vertikalt
+    height: 100vh; // Sätter höjden på sektionen till 100% av viewport-höjden
+    text-align: center;
+    background-color: #F3F6FF;
+
+
+
+
+
+
+    .searchbox {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: flex-start;
+        height: 500px;
+        width: auto;
+        border: solid black;
+
+        .searchingbox {
+            display: flex;
+            flex-direction: column;
+            height: 290px;
+            gap: 15px;
+            border: solid black;
+
+            .Termscheck {
+                width: 120px;
+                border: solid black;
+            }
+
+            .button-container {
+                border: solid black;
+                left: 25px;
+
+
+
+
+                .button {
+                    width: 312px;
+                    padding: 10px;
+                    box-sizing: border-box;
+                }
+            }
+
+
+
+            .textin {
+
+
+                input {
+                    border: solid black;
+                    width: 300px;
+                    height: 25px;
+                    border-radius: 8px;
+                    padding: 5px;
+                }
+
+                p {
+                    position: relative;
+                    top: 10px;
+                    right: 0px;
+                    border: solid black;
+                    width: 70px;
+                }
+            }
+        }
+    }
+}

@@ -10,6 +10,7 @@
 
         public string LastName { get; set; }
 
+        public string? ProfilImage {  get; set; } 
         public string? Bio {  get; set; }
         public string IdentityUserId { get; set; }
 

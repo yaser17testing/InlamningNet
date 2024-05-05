@@ -21,45 +21,56 @@
 			</h1>
 
 			<form method="post">
+				
 
 				<div class="mb-3">
 
 					<label class="form-label">Firstname</label>
-					<input type="text" id="Name" class="form-control" asp-for="Name" />
-
+					<input type="text" id="Name" class="form-control" asp-for="Name"/>
+					<span class="text-danger" asp-validation-for="Name"></span>
 				</div>
 
 
 				<div class="mb-3">
 
 					<label class="form-label">Lastname</label>
-					<input type="text" id="Last" class="form-control" asp-for="LastName" />
-
+					<input type="text" id="Last" class="form-control" asp-for="LastName"/>
+					<span class="text-danger" asp-validation-for="LastName"></span>
 				</div>
 
 
 				<div class="mb-3">
 
 					<label class="form-label">Username</label>
-					<input type="text" id="username" class="form-control" asp-for="Username" />
-
+					<input type="text" id="username" class="form-control" asp-for="Username"/>
+					<span class="text-danger" asp-validation-for="Username"></span>
 				</div>
 
 
 				<div class="mb-3">
 
 					<label class="form-label">Email</label>
-					<input type="email" id="email" class="form-control" asp-for="Email" />
-
+					<input type="email" id="email" class="form-control" asp-for="Email"/>
+					<span class="text-danger" asp-validation-for="Email"></span>
 				</div>
 
 
 				<div class="mb-3">
 
 					<label class="form-label">Password</label>
-					<input type="password" id="password" class="form-control" asp-for="Password" />
-
+					<input type="password" id="password" class="form-control" asp-for="Password"/>
+					<span class="text-danger" asp-validation-for="Password"></span>
 				</div>
+
+
+				<div class="mb-3">
+
+					<label class="form-label">Confirm Password</label>
+					<input type="password" id="confirmpassword" class="form-control" asp-for="ConfirmPassword" />
+					<span class ="text-danger" asp-validation-for="ConfirmPassword"></span>
+				</div>
+
+
 
 				<div class="mb-3">
 
@@ -77,4 +88,6 @@
 		</div>
 	</div>
 
-</div>
+</div> @await Html.PartialAsync("_ValidationScript")
+
+				

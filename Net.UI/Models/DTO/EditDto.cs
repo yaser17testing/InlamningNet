@@ -16,7 +16,9 @@ namespace Net.UI.Models.DTO
 
 		public string LastName { get; set; }
 
-		public string? Bio { get; set; }
+		public string? ProfilImage { get; set; }
+
+        public string? Bio { get; set; }
 
 
 		public string AdressOne { get; set; }
