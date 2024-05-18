@@ -22,9 +22,21 @@ namespace InlamningNet.DTO
 		public int Duration { get; set; } // Exempelvis i antal dagar
 
 
+        public string ImageUrl { get; set; }
 
 
 
 
-	}
+     
+
+
+        
+
+        public string Author { get; set; }
+
+        public int? Likebutton { get; set; }
+
+
+
+    }
 }

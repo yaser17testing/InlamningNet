@@ -2,5 +2,25 @@
   {
     "outputFile": "wwwroot/css/Login.css",
     "inputFile": "wwwroot/css/Login.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/IndexCourse.css",
+    "inputFile": "wwwroot/css/IndexCourse.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/SignIn.css",
+    "inputFile": "wwwroot/css/SignIn.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/Layout.css",
+    "inputFile": "wwwroot/css/Layout.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/Home.css",
+    "inputFile": "wwwroot/css/Home.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/Register.css",
+    "inputFile": "wwwroot/css/Register.scss"
   }
 ]

@@ -3,91 +3,178 @@
 }
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Register.css">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Inter:wght@300;400;500;700;900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4116aba114.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+  
+
+    <section class="Sign">
+        <div class="container">
+
+            <div class="text-container">
+
+                <h1>Create Account</h1>
+
+
+
+                <div class="accountBox">
+                    <p>Already have an account?</p>  <div class="test"> <a href="#">Sign in Here</a></div>
+
+
+
+
+                </div>
+
+            </div>
+
+
+            <div class="searchbox">
+
+
+
+                <form class="searchingbox" method="post">
+
+
+                    <div class="namebox">
+
+                        <div class="textin">
+
+                            <p>First name</p>
+							<input type="text" class="en" asp-for="Name" id="Name" placeholder="Firstname"/>
+
+                            <span class="text-danger" asp-validation-for="Name"></span>
+
+                        </div>
+
+
+                        <div class="textin">
+
+                            <p class="ptwo">Lastname</p>
+                            <input type="text" class="tva" asp-for="LastName" id="Last" placeholder="Lastname" />
+
+                            <span class="text-danger" asp-validation-for="LastName"></span>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="textin">
+
+                        <p>Username</p>
+                        <input type="text" class="inin" asp-for="Username" id="username" placeholder="Username" />
+
+                        <span class="text-danger" asp-validation-for="Username"></span>
+
+                    </div>
+
+
+
+
+                    <div class="textin">
+
+                        <p>Email Adress</p>
+                        <input type="text" class="inin" asp-for="Email" id="email" placeholder="Email" />
+
+                        <span class="text-danger" asp-validation-for="Email"></span>
+
+                    </div>
+
+
+                    <div class="textin">
+
+                        <p>Password</p>
+                        <input type="password" class="inin" asp-for="Password" id="password" placeholder="Password" />
+
+                        <span class="text-danger" asp-validation-for="Password"></span>
+
+                    </div>
+
+
+                    <div class="textin">
+
+                        <p>Confirm password</p>
+                        <input type="password" class="inin" asp-for="ConfirmPassword" id="confirmpassword" placeholder="Confirmpassword" />
+
+                        <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+
+                    </div>
+
+
+
+
+                    <div class="Termscheck">
+                        <input type="checkbox" class="checkbox1">
+                        <label for="checkbox1">I agree terms & condition</label>
+                    </div>
+
+
+                    <div class="button-container">
+                        <button type="submit" class="button">Sign Up</button>
+                    </div>
 
 
 
 
 
-<div class="container mx-auto">
 
-	<div class="row justify-content-center">
-
-		<div class="col-12 col-lg-6">
-
-			<h1 class="mt-3 mb-3 h3">
-				Register
-
-
-			</h1>
-
-			<form method="post">
-				
-
-				<div class="mb-3">
-
-					<label class="form-label">Firstname</label>
-					<input type="text" id="Name" class="form-control" asp-for="Name"/>
-					<span class="text-danger" asp-validation-for="Name"></span>
-				</div>
-
-
-				<div class="mb-3">
-
-					<label class="form-label">Lastname</label>
-					<input type="text" id="Last" class="form-control" asp-for="LastName"/>
-					<span class="text-danger" asp-validation-for="LastName"></span>
-				</div>
-
-
-				<div class="mb-3">
-
-					<label class="form-label">Username</label>
-					<input type="text" id="username" class="form-control" asp-for="Username"/>
-					<span class="text-danger" asp-validation-for="Username"></span>
-				</div>
-
-
-				<div class="mb-3">
-
-					<label class="form-label">Email</label>
-					<input type="email" id="email" class="form-control" asp-for="Email"/>
-					<span class="text-danger" asp-validation-for="Email"></span>
-				</div>
-
-
-				<div class="mb-3">
-
-					<label class="form-label">Password</label>
-					<input type="password" id="password" class="form-control" asp-for="Password"/>
-					<span class="text-danger" asp-validation-for="Password"></span>
-				</div>
-
-
-				<div class="mb-3">
-
-					<label class="form-label">Confirm Password</label>
-					<input type="password" id="confirmpassword" class="form-control" asp-for="ConfirmPassword" />
-					<span class ="text-danger" asp-validation-for="ConfirmPassword"></span>
-				</div>
-
-
-
-				<div class="mb-3">
-
-					<button type="submit" class="btn btn-dark">Register</button>
-
-				</div>
-
-
-			</form>
+                </form>
 
 
 
 
 
-		</div>
-	</div>
 
-</div> @await Html.PartialAsync("_ValidationScript")
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+			@await Html.PartialAsync("_ValidationScript")
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+   
+	
+
+</body>
+</html>
+
+
+
+
+ 
 
 				

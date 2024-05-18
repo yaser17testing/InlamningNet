@@ -90,6 +90,12 @@ namespace InlamningNet.Controllers
             var subscriptionDomainModel = new Subscription
             {
                 Email = subscriptionPost.Email,
+                IsDailyNewsletterSubscribed = subscriptionPost.IsDailyNewsletterSubscribed,
+                IsEventUpdatesSubscribed = subscriptionPost.IsEventUpdatesSubscribed,
+                IsAdvertisingUpdatesSubscribed = subscriptionPost.IsAdvertisingUpdatesSubscribed,
+                IsStartUpsWeeklySubscribed = subscriptionPost.IsStartUpsWeeklySubscribed,
+                IsWeekInReviewSubscribed = subscriptionPost.IsWeekInReviewSubscribed,
+                IsPodcastsSubscribed = subscriptionPost.IsPodcastsSubscribed
             };
 
 
@@ -104,6 +110,12 @@ namespace InlamningNet.Controllers
                 Email = subscriptionDomainModel.Email,
                 SubscriptionDate = subscriptionDomainModel.SubscriptionDate,
                 ActiveStatus = subscriptionDomainModel.ActiveStatus,
+                IsDailyNewsletterSubscribed = subscriptionDomainModel.IsDailyNewsletterSubscribed,
+                IsEventUpdatesSubscribed = subscriptionDomainModel.IsEventUpdatesSubscribed,
+                IsAdvertisingUpdatesSubscribed = subscriptionDomainModel.IsAdvertisingUpdatesSubscribed,
+                IsStartUpsWeeklySubscribed = subscriptionDomainModel.IsStartUpsWeeklySubscribed,
+                IsWeekInReviewSubscribed = subscriptionDomainModel.IsWeekInReviewSubscribed,
+                IsPodcastsSubscribed = subscriptionDomainModel.IsPodcastsSubscribed
 
             };
             return CreatedAtAction(nameof(GetById), new { id = subscriptionDto.SubscriptionId }, subscriptionDto);

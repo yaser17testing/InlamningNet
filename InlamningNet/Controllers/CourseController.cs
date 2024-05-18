@@ -44,6 +44,9 @@ namespace InlamningNet.Controllers
 					Description = courseDomain.Description,
 					Price = courseDomain.Price,
 					Duration = courseDomain.Duration,
+					ImageUrl = courseDomain.ImageUrl,
+					Author = courseDomain.Author,
+					Likebutton = courseDomain.Likebutton,
 
 				});
 
@@ -74,6 +77,9 @@ namespace InlamningNet.Controllers
 				Description = courseDomain.Description,
 				Price = courseDomain.Price,
 				Duration = courseDomain.Duration,
+				ImageUrl = courseDomain.ImageUrl,
+				Author = courseDomain.Author,
+				Likebutton = courseDomain.Likebutton,
 			};
 			return Ok(courseDto);
 
@@ -95,7 +101,11 @@ namespace InlamningNet.Controllers
 				Description = addCourseRequestDto.Description,
 				Price = addCourseRequestDto.Price,
 				Duration = addCourseRequestDto.Duration,
-			};
+				ImageUrl = addCourseRequestDto.ImageUrl,
+				Author = addCourseRequestDto.Author,
+				Likebutton = addCourseRequestDto.Likebutton,
+                 
+    };
 
 
 
@@ -110,7 +120,12 @@ namespace InlamningNet.Controllers
 				Description = courseDomainModel.Description,
 				Price = courseDomainModel.Price,
 				Duration = courseDomainModel.Duration,
-
+				ImageUrl= courseDomainModel.ImageUrl,
+				Author= courseDomainModel.Author,
+				Likebutton= courseDomainModel.Likebutton,
+				
+				
+				
 			};
 			return CreatedAtAction(nameof(GetById), new { id = courseDto.CourseId }, courseDto);
 		}

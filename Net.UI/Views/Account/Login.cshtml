@@ -9,51 +9,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="~/css/Login.css">
+    <link rel="stylesheet" href="~/css/SignIn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Inter:wght@300;400;500;700;900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4116aba114.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 
-    <header>
-        <div class="container">
-
-            <div class="undermenu">
-
-                <nav class="navOne">
-                    <a href="#">Silicon</a>
-                    <a href="#">Overview</a>
-                    <a href="#">Features</a>
-
-                    <a href="#">contacts</a>
-
-
-                </nav>
-
-
-
-                <nav class="navTwo">
-                    <div class="button-container">
-                        <a class="button" href="#">Sign in</a>
-
-                        <a class="button" href="#">Sign Up</a>
-
-
-                    </div>
-
-
-
-
-                </nav>
-
-
-
-
-            </div>
-
-
-
-        </div>
-    </header>
+   
 
     <section class="Sign">
         <div class="container">
@@ -63,8 +28,8 @@
                 <h1>Welcome Back</h1>
 
                 <div class="accountBox">
-                    <p>Dont have an account yet?</p>
-                    <p>Länk</p>
+
+                    <p>Don't have an account yet?</p><a href="#">Sign up here</a>
                 </div>
 
             </div>
@@ -79,18 +44,21 @@
                     <div class="textin">
 
                         <p>Username</p>
-                        <input type="text" placeholder="Username" asp-for="Username"/>
+                        <input type="text" placeholder="Username" asp-for="Username" />
                         <span class="text-danger" asp-validation-for="Username"></span>
+
+
                     </div>
 
 
                     <div class="textin">
 
                         <p>Password</p>
-                        <input type="password" placeholder="Your password" asp-for="Password"/>
+                        <input type="password" placeholder="Your password" asp-for="Password" />
                         <span class="text-danger" asp-validation-for="Password"></span>
-                    </div>
 
+
+                    </div>
 
 
 
@@ -99,10 +67,18 @@
 
 
 
+
                     <div class="Termscheck">
-                        <input type="checkbox" class="checkbox1"/>
+                        <input type="checkbox" class="checkbox1">
                         <label for="checkbox1">Remember Me</label>
                     </div>
+
+                   
+
+
+
+
+
 
                 </form>
 
@@ -143,6 +119,16 @@
 
 
     </footer>
+
+
+
+
+
+
+
+
+
+
 
 
 

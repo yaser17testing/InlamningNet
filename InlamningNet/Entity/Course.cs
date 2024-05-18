@@ -15,6 +15,10 @@ namespace InlamningNet.Entity
 
 		public string Description { get; set; }
 
+		public string ImageUrl { get; set; }
+
+
+
 
 		[Column(TypeName = "money")]
 		public decimal Price { get; set; }
@@ -22,7 +26,9 @@ namespace InlamningNet.Entity
 
 		public int Duration { get; set; } // Exempelvis i antal dagar
 
+		public string Author { get; set; }
 
+		public int? Likebutton { get; set; }
 
 	}
 }

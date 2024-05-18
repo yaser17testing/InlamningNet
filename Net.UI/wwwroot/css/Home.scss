@@ -1,0 +1,407 @@
+﻿section {
+    margin-top: 0px; // Ger mellanrum mellan varje section
+
+    &:last-child {
+        margin-bottom: 0; // Tar bort margin från den sista section för att undvika extra utrymme vid sidans slut
+    }
+}
+
+body {
+    font-family: "Manrope",sans-serif;
+}
+
+header {
+
+    .container {
+        background-color: #F3F6FF;
+    }
+}
+
+.Features {
+    .container {
+        background-color: #F3F6FF;
+
+
+
+        .text-container {
+            border: solid red;
+            width: 350px;
+            height: 400px;
+
+            .btn-header {
+            }
+
+            h1 {
+                font-family: "Manrope",sans-serif;
+                font-size: 40px;
+            }
+
+            .pone {
+                position: relative;
+                bottom: 15px;
+                font-family: "Manrope",sans-serif;
+                font-size: 14px;
+            }
+        }
+    }
+}
+.button {
+    border-radius: 3px;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: gray;
+}
+
+
+.Features .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; // Säkerställer att containern tar upp hela bredden
+}
+
+.image-container, .text-container {
+    width: 48%; // Sätter varje containers bredd till 48% för att ge utrymme för mellanrum
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-container {
+    padding: 0 20px; // Lägger till padding för text-container
+    order: -1; // Flyttar text-container till vänster
+
+
+
+
+
+    h1 {
+    }
+
+
+    .btn-header {
+        width: 150px;
+
+
+        .button {
+            border-radius: 6px;
+            text-align: center;
+            font-size: 14px;
+            padding: 8px 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #EFF2FC;
+            background-color: #6366F1;
+        }
+    }
+}
+
+
+.Middle {
+    display: flex;
+    justify-content: center; // Centrerar innehållet horisontellt
+    align-items: center; // Centrerar innehållet vertikalt
+    height: 120vh; // Sätter höjden på sektionen till 100% av viewport-höjden
+    text-align: center;
+    background-color: #F3F6FF;
+
+    .text-container {
+        position: relative;
+        left: 150px;
+        font-family: "Manrope",sans-serif;
+
+        h1 {
+            font-size: 25px;
+            font-family: 'Manrope',sans-serif;
+            color: #0B0F19;
+        }
+    }
+
+    .boxreklam {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0px;
+        position: relative;
+        font-family: "Manrope",sans-serif;
+
+        .box {
+            border: gray solid;
+            width: 250px;
+        }
+    }
+}
+
+
+.slider {
+    display: flex;
+    justify-content: center; // Centrerar innehållet horisontellt
+    align-items: center; // Centrerar innehållet vertikalt
+    height: 100vh; // Sätter höjden på sektionen till 100% av viewport-höjden
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, white 50%, black 50%); // Skapar en gradient som är vit på ena halvan och svart på den andra
+
+
+
+    .image-container {
+
+
+        .text-container {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            left: 120px;
+            font-family: 'Courier New', Courier, monospace;
+            width: 700px;
+            border: solid brown;
+
+            .textblack {
+                position: relative;
+                width: 260px;
+                color: black;
+                padding-right: 50px;
+                right: 45px;
+            }
+
+
+            .textwhite {
+                position: relative;
+                height: 49px;
+                width: 210px;
+                right: 45px;
+                padding-left: 105px;
+                color: white;
+            }
+        }
+
+        img {
+            height: 500px;
+            width: 800px;
+        }
+
+        width: 900px;
+        height: 600px;
+    }
+}
+
+
+
+
+.Content {
+
+
+    .container {
+        display: flex; // Använder Flexbox för layout
+        justify-content: space-between; // Skapar utrymme mellan elementen
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+
+    .image-container {
+        height: auto;
+        flex-basis: 53%; // Flex-värde kan justeras för att ändra hur mycket utrymme detta tar upp
+        max-width: 51%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .text-container {
+        flex-basis: 30%; // Flex-värde kan justeras här också
+        max-width: 30%; // Maximal bredd för textcontainern
+        padding: 10px; // Lägger till lite utrymme runt texten
+
+
+        .button-container {
+            width: 200px;
+
+            .button {
+                border-radius: 6px;
+                text-align: center;
+                font-size: 14px;
+                padding: 8px 28px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: gray;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.Apps {
+    background-color: #EFF2FC;
+
+    .container {
+        height: 600px;
+        display: flex; // Använder Flexbox för layout
+        justify-content: center; // Skapar utrymme mellan elementen
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: 50px;
+
+
+
+
+
+        .image-container {
+            height: auto;
+            flex-basis: 31%; // Flex-värde kan justeras för att ändra hur mycket utrymme detta tar upp
+            max-width: 31%;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .text-container {
+        flex-basis: 30%; // Flex-värde kan justeras här också
+        max-width: 40%; // Maximal bredd för textcontainern
+        // Lägger till lite utrymme runt texten
+    }
+}
+
+
+
+
+
+
+.Tools {
+    display: flex;
+    justify-content: center; // Centrerar innehållet horisontellt
+    align-items: center; // Centrerar innehållet vertikalt
+    height: 100vh; // Sätter höjden på sektionen till 100% av viewport-höjden
+    text-align: center;
+
+
+
+    .container {
+
+
+
+        .text-container {
+            position: relative;
+            left: 200px;
+            bottom: 100px;
+        }
+
+        .BoxarIkon {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            position: relative;
+
+
+            .ikonboxar {
+                height: 150px;
+                width: 200px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.Inputbox {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; // Centrerar innehållet horisontellt
+        align-items: center; // Centrerar innehållet vertikalt
+        height: 50vh; // Sätter höjden på sektionen till 100% av viewport-höjden
+        text-align: center;
+        gap: 40px;
+
+
+
+
+
+
+
+
+        .check-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            .text {
+                width: 160px;
+                position: relative;
+                bottom: 15px;
+            }
+
+            .checkcheck {
+                display: flex;
+                flex-direction: column;
+
+
+
+                input[type="checkbox"] {
+                    width: 15px;
+                    height: 15px;
+                    transform: scale(0.75); /* Make the checkbox smaller */
+                }
+            }
+        }
+
+        .searchbox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+
+
+
+
+
+            .searchingbox {
+
+                input {
+                    width: 400px;
+                    height: 20px;
+                    border: solid black;
+                }
+            }
+        }
+    }
+
+
+
+    .Termscheck {
+        position: relative;
+        right: 235px;
+        bottom: 30px;
+    }
+}
+
+
+
+
+
+
+   

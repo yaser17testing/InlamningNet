@@ -1,0 +1,228 @@
+﻿
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+.undermenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+
+    .navTwo {
+
+        .switch {
+            position: relative;
+            right: 50px;
+            top: 5px;
+            display: inline-block;
+            width: 50px; /* Bredden på switchen */
+            height: 25px; /* Höjden på switchen */
+        }
+        /* Döljer det faktiska checkbox-elementet */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        /* Stil för glidaren */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc; /* Bakgrundsfärg när switchen är av */
+            transition: .4s; /* Animeringstid för övergångar */
+            border-radius: 34px; /* Ger glidaren en avrundad form */
+        }
+        /* Skapar den vita cirkeln inuti glidaren */
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px; /* Höjden på den vita cirkeln */
+            width: 20px; /* Bredden på den vita cirkeln */
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s; /* Animeringstid för övergångar */
+            border-radius: 50%; /* Ger den vita cirkeln en perfekt cirkelform */
+        }
+        /* Justerar utseendet när checkboxen är ikryssad (switchen är "på") */
+        input:checked + .slider {
+            background-color: gray; /* Blå bakgrundsfärg när switchen är på */
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px); /* Flyttar den vita cirkeln till höger */
+        }
+    }
+
+
+
+
+
+    .navOne {
+        font-family: "Manrope", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+
+
+
+        .iconklass {
+            font-family: "Manrope", sans-serif;
+            font-weight: 800;
+            font-size: 16px;
+        }
+
+
+
+
+        .yes {
+            position: relative;
+            left: 20px;
+            font-family: "Manrope", sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+
+        a {
+            color: #191919;
+            text-decoration: none;
+            margin-right: 35px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+.lank {
+    display: flex;
+    justify-content: flex-start;
+    padding: 60px;
+}
+
+
+.CourseInput {
+
+
+
+
+
+
+    .TopInput {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .CourseBoxes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 40px;
+    }
+
+
+    .box {
+        display: grid;
+        grid-template-columns: 1fr;
+
+
+
+
+
+
+        p {
+            font: 1em sans-serif;
+            font-size: 13px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h5 {
+            border: solid black;
+            width: 280px;
+            height: 40px;
+            font-size: 15px;
+        }
+
+        width: 300px;
+        height: 300px;
+        border: solid black;
+    }
+
+
+
+    .underdiv {
+        display: flex;
+        justify-content: flex-start;
+        gap: 120px;
+        position: relative;
+        bottom: 5px;
+
+
+        .icontime {
+            display: flex;
+            justify-content: flex-start;
+            height: 20px;
+            width: 20px;
+        }
+
+
+        .IconLike {
+            display: flex;
+            justify-content: flex-start;
+            height: 20px;
+            width: 20px;
+        }
+    }
+}
+
+
+
+
+
+
+.underfooter {
+
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pagination {
+        list-style: none; /* Tar bort list-stil */
+        padding: 0; /* Tar bort padding */
+        display: flex; /* Gör att listelementen ligger i rad */
+        border: none; /* Ser till att inga borders finns */
+    }
+
+    .pagination .page-item {
+        margin-right: 2px; /* Lägger till lite mellanrum mellan varje item */
+    }
+
+    .pagination .page-link {
+        color: black; /* Sätter textfärgen till svart */
+        text-decoration: none; /* Tar bort understrykning */
+        background-color: white; /* Bakgrundsfärg vit när den inte är aktiv */
+        display: block; /* Gör länken till block, så den fyller hela list-item */
+        padding: 10px 20px; /* Lägger till padding runt texten */
+        border-radius: 5px; /* Ger border-radius */
+        border: none; /* Inga borders */
+    }
+
+    .pagination .page-item.active .page-link {
+        background-color: purple; /* Lila bakgrund för den aktiva sidan */
+        color: white; /* Vit text för bättre kontrast */
+    }
+}

@@ -1,5 +1,11 @@
 ﻿html, body {
-    background-color: #F3F6FF;
+    background-color: white;
+    font-family: "Manrope",sans-serif;
+
+
+    input {
+        border: 1px solid #cccccc;
+    }
 }
 
 .undermenu {
@@ -14,10 +20,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
         .button-container {
             display: flex;
             justify-content: space-between;
             gap: 0px;
+
+            .button {
+
+                &.plustwo {
+                    background-color: #6366F1;
+                }
+            }
         }
     }
 
@@ -45,11 +67,25 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: gray;
+    background-color: #6366F1;
+    transition: filter 0.3s;
+    color: white;
+
+
+    &:hover {
+        filter: brightness(70%);
+    }
 }
 
 
+.register {
 
+
+    a {
+        text-decoration: none;
+        color: #6366F1;
+    }
+}
 
 
 
@@ -61,11 +97,34 @@
     align-items: center; // Centrerar innehållet vertikalt
     height: 100vh; // Sätter höjden på sektionen till 100% av viewport-höjden
     text-align: center;
-    background-color: #F3F6FF;
+    background-color: white;
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+
+    .accountBox {
+        display: flex;
+        justify-content: flex-start;
+
+        p {
+            position: relative;
+            bottom: 15px;
+            right: 5px;
+        }
 
 
-
-
+        a {
+            text-decoration: none;
+            color: #6366F1;
+        }
+    }
 
 
     .searchbox {
@@ -73,19 +132,17 @@
         flex-direction: column;
         gap: 15px;
         justify-content: flex-start;
-        height: 500px;
-        width: auto;
         border: solid black;
 
         .searchingbox {
             display: flex;
             flex-direction: column;
-            height: 290px;
-            gap: 15px;
+            gap: 20px;
             border: solid black;
 
             .Termscheck {
-                width: 120px;
+                display: flex;
+                justify-content: flex-start;
                 border: solid black;
             }
 
@@ -97,7 +154,7 @@
 
 
                 .button {
-                    width: 312px;
+                    width: 512px;
                     padding: 10px;
                     box-sizing: border-box;
                 }
@@ -109,19 +166,16 @@
 
 
                 input {
-                    border: solid black;
-                    width: 300px;
+                    width: 500px;
                     height: 25px;
-                    border-radius: 8px;
+                    border-radius: 10px;
                     padding: 5px;
                 }
 
                 p {
-                    position: relative;
-                    top: 10px;
-                    right: 0px;
+                    display: flex;
+                    justify-content: flex-start;
                     border: solid black;
-                    width: 70px;
                 }
             }
         }

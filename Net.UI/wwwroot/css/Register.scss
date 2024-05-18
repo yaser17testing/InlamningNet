@@ -1,0 +1,147 @@
+﻿html {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+
+
+    input {
+        border: 1px solid #cccccc;
+    }
+}
+
+
+
+.button {
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: gray;
+}
+
+
+
+
+
+
+
+
+.Sign {
+    display: flex;
+    justify-content: center; // Centrerar innehållet horisontellt
+    align-items: center; // Centrerar innehållet vertikalt
+    height: 130vh; // Sätter höjden på sektionen till 100% av viewport-höjden
+    text-align: center;
+
+
+
+
+
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+
+
+
+        h1 {
+            position: relative;
+            top: 30px;
+            right: 35px;
+            font-family: "Manrope", sans-serif;
+            font-weight: 800;
+            font-size: 40px;
+        }
+
+        .accountBox {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+
+
+
+            .test {
+                position: relative;
+                top: 15px;
+            }
+        }
+    }
+
+
+    .searchbox {
+        display: flex;
+        flex-direction: column;
+
+
+        .searchingbox {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 15px;
+
+            .Termscheck {
+                display: flex;
+                justify-content: flex-start;
+            }
+
+
+
+            .button {
+                width: 107%;
+                background-color: #6366F1;
+                color: white;
+            }
+
+            .namebox {
+                display: flex;
+                justify-content: space-around;
+
+
+
+
+
+
+
+
+                .tva {
+                    position: relative;
+                    left: 20px;
+                }
+            }
+
+
+
+            .textin {
+
+
+
+
+                p {
+                    display: flex;
+                    justify-self: flex-end;
+                    font-family: "Manrope", sans-serif;
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+
+                .ptwo {
+                    position: relative;
+                    left: 20px;
+                }
+
+                input {
+                    padding: 10px;
+                    border-radius: 5px;
+                }
+
+                .inin {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

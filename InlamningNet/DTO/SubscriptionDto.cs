@@ -22,7 +22,21 @@ namespace InlamningNet.DTO
         public DateTime SubscriptionDate { get; set; }
 
 
+
+
+
+
+
         public bool? ActiveStatus { get; set; }
+
+
+
+        public bool IsDailyNewsletterSubscribed { get; set; } = false;
+        public bool IsEventUpdatesSubscribed { get; set; } = false;
+        public bool IsAdvertisingUpdatesSubscribed { get; set; } = false;
+        public bool IsStartUpsWeeklySubscribed { get; set; } = false;
+        public bool IsWeekInReviewSubscribed { get; set; } = false;
+        public bool IsPodcastsSubscribed { get; set; } = false;
 
 
 
