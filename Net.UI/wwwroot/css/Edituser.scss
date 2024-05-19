@@ -1,0 +1,383 @@
+﻿html, body {
+    background-color: #FFFFFF;
+    
+
+
+
+
+
+
+    input {
+        border: 1px solid #cccccc;
+    }
+}
+
+
+
+.button {
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #6366F1;
+}
+
+
+
+
+
+
+
+.Account {
+
+    .container {
+        display: flex;
+        justify-content: flex-start; // Centrerar innehållet horisontellt
+
+        align-items: center; // Centrerar innehållet vertikalt
+        height: 80vh; // Sätter höjden på sektionen till 100% av viewport-höjden
+        text-align: center;
+        gap: 100px;
+
+
+        .border-line {
+            border-top: 1px solid #E2E5F1;
+            position: relative;
+            top: 45px;
+            height: 50px;
+            width: 590px;
+        }
+
+        .Profil {
+            position: relative;
+            bottom: 160px;
+            left: 50px;
+            width: 20%;
+
+            .ppp {
+                display: grid;
+                grid-template-columns: 1fr;
+                border: solid black;
+                height: 300px;
+                width: 300px;
+
+
+
+                .button-profil {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 5px;
+
+
+                    .bprofiltwo {
+                        display: flex;
+                        justify-content: flex-start;
+                        position: relative;
+                        left: 15px;
+                    }
+
+
+
+                    .bprofil {
+                        border-radius: 6px;
+                        text-align: center;
+                        font-size: 14px;
+                        padding: 8px 15px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 10px;
+                        background-color: #6366F1;
+                        transition: filter 0.3s;
+                        color: white;
+                        text-decoration: none;
+
+                        &:hover {
+                            filter: brightness(70%);
+                        }
+                    }
+                }
+
+                h1 {
+                }
+
+                p {
+                    display: block;
+                    justify-content: center;
+                }
+
+                .myimage {
+                    position: relative;
+                    left: 100px;
+                    border: 1px solid #000;
+                    border-radius: 50%;
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+
+
+
+        .Details {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 80vh;
+            width: 600px;
+
+            .pinfo {
+                color: #6366F1;
+            }
+
+            h1 {
+                top: 10px;
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                font-family: "Manrope", sans-serif;
+                font-weight: 800;
+                font-size: 30px;
+            }
+        }
+
+
+        p {
+            display: flex;
+            justify-content: flex-start;
+            font-family: "Manrope", sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+        }
+    }
+
+
+
+
+
+    .searchbox {
+        display: flex;
+        flex-direction: column;
+        border: solid black;
+
+        .searchingbox2 {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+
+
+
+
+
+
+
+            .button.three {
+                background-color: #EFF2FC;
+                color: #33354D;
+                text-decoration: none;
+                width: 30px;
+            }
+
+
+
+            .button.four {
+                text-decoration: none;
+                width: 70px;
+                color: white;
+            }
+
+
+
+            .button-container {
+                display: flex;
+                justify-content: flex-start;
+                position: relative;
+                top: 5px;
+                gap: 10px;
+            }
+
+            .button {
+                width: 50px;
+            }
+
+
+
+
+
+            .namebox.three {
+                display: flex;
+                justify-content: flex-start;
+                gap: 134px;
+
+                input {
+                    width: 130%;
+                    padding: 10px;
+                }
+            }
+
+            .textinBio {
+
+
+
+                p {
+                    display: flex;
+                    justify-content: flex-start;
+                    font-family: "Manrope", sans-serif;
+                    font-weight: 600;
+                    font-size: 16px;
+                    position: relative;
+                    top: 12px;
+                }
+
+                input {
+                    border-radius: 5px;
+                    width: 96%;
+                    padding: 10px;
+                }
+            }
+
+
+            .textin {
+
+                p {
+                    display: flex;
+                    justify-self: flex-end;
+                    font-family: "Manrope", sans-serif;
+                    font-weight: 600;
+                    font-size: 16px;
+                    position: relative;
+                    top: 12px;
+                }
+
+                .inin {
+                    border-radius: 5px;
+                    padding: 5px;
+                    width: 90%;
+                }
+            }
+        }
+
+        .searchingbox {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            .button.one {
+                background-color: #EFF2FC;
+                color: #33354D;
+                text-decoration: none;
+                width: 30px;
+            }
+
+
+
+            .button.two {
+                text-decoration: none;
+                width: 70px;
+                color: white;
+            }
+
+
+            .textinBio {
+
+
+
+                .bio {
+                    font-family: "Manrope", sans-serif;
+                    font-weight: 600;
+                    font-size: 16px;
+                    position: relative;
+                    top: 12px;
+                }
+            }
+
+
+
+
+
+
+            .button-container {
+                display: flex;
+                justify-content: flex-start;
+                gap: 5px;
+
+
+                .button {
+                    position: relative;
+                    top: 15px;
+                }
+            }
+
+
+
+            .button {
+                width: 50px;
+            }
+
+            .namebox.two {
+                display: flex;
+                justify-content: flex-start;
+                gap: 134px;
+
+                input {
+                    padding: 10px;
+                    width: 130%;
+                }
+            }
+
+
+
+
+
+            .namebox.one {
+                display: flex;
+                justify-content: flex-start;
+                gap: 134px;
+
+                input {
+                    width: 130%;
+                    padding: 10px;
+                }
+            }
+
+            .textinBio {
+                p {
+                    display: flex;
+                    justify-content: flex-start;
+                }
+
+                input {
+                    border-radius: 5px;
+                    width: 93%;
+                    padding: 20px;
+                }
+            }
+
+
+            .textin {
+
+                p {
+                    display: flex;
+                    justify-self: flex-start;
+                    position: relative;
+                    top: 12px;
+                    font-family: "Manrope", sans-serif;
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+
+                .inin {
+                    border-radius: 5px;
+                    padding: 5px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

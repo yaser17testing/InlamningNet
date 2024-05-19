@@ -22,5 +22,9 @@
   {
     "outputFile": "wwwroot/css/Register.css",
     "inputFile": "wwwroot/css/Register.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/Edituser.css",
+    "inputFile": "wwwroot/css/Edituser.scss"
   }
 ]

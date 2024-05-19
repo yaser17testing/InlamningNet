@@ -40,6 +40,52 @@
 
     .navTwo {
 
+        .switch {
+            position: relative;
+            right: 50px;
+            top: 5px;
+            display: inline-block;
+            width: 50px; /* Bredden på switchen */
+            height: 25px; /* Höjden på switchen */
+        }
+        /* Döljer det faktiska checkbox-elementet */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        /* Stil för glidaren */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: gray; /* Bakgrundsfärg när switchen är av */
+            transition: .4s; /* Animeringstid för övergångar */
+            border-radius: 34px; /* Ger glidaren en avrundad form */
+        }
+        /* Skapar den vita cirkeln inuti glidaren */
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px; /* Höjden på den vita cirkeln */
+            width: 20px; /* Bredden på den vita cirkeln */
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s; /* Animeringstid för övergångar */
+            border-radius: 50%; /* Ger den vita cirkeln en perfekt cirkelform */
+        }
+        /* Justerar utseendet när checkboxen är ikryssad (switchen är "på") */
+        input:checked + .slider {
+            background-color: black; /* Blå bakgrundsfärg när switchen är på */
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px); /* Flyttar den vita cirkeln till höger */
+        }
 
 
 

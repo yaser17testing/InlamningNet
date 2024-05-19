@@ -8,15 +8,18 @@
 
   <ItemGroup>
     <Content Remove="compilerconfig.json" />
+    <Content Remove="wwwroot\css\Edituser.scss" />
     <Content Remove="wwwroot\css\Layout.scss" />
   </ItemGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\Edituser.scss" />
     <_ContentIncludedByDefault Remove="wwwroot\css\Layout.scss" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="compilerconfig.json" />
+    <None Include="wwwroot\css\Edituser.scss" />
     <None Include="wwwroot\css\Layout.scss" />
   </ItemGroup>
 
